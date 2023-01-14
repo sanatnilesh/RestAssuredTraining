@@ -28,4 +28,14 @@ public class GetPostSteps{
     public void iShouldSeeTheAuthorNames() {
         BDDStyleMethod.ContainsAnyCollection();
     }
+
+    @Then("I should verify Get parameter")
+    public void iShouldVerifyGetParameter() {
+        BDDStyleMethod.PerformPathParameter();
+    }
+
+    @Then("I should verify query parameter")
+    public void iShouldVerifyQueryParameter() {
+        BDDStyleMethod.PerformQueryParameter();
+    }
 }
