@@ -7,16 +7,16 @@ import static org.hamcrest.Matchers.*;
 
 public class BDDStyleMethod {
 
-    public  static void GetPostSteps(String postNumber){
+    public static void GetPostSteps(String postNumber) {
         given()
                 .contentType(ContentType.JSON)
-        .when()
-                .get(String.format("http://localhost:3000/posts/%s",postNumber))
-        .then()
+                .when()
+                .get(String.format("http://localhost:3000/posts/%s", postNumber))
+                .then()
                 .body("author", is("sanat"));
     }
 
-    public  static  void  ContainsAnyCollection(){
+    public static void ContainsAnyCollection() {
         given()
                 .contentType(ContentType.JSON)
                 .when()
@@ -33,7 +33,7 @@ public class BDDStyleMethod {
                 .when()
                 .get("http://localhost:3000/posts/{posts}")
                 .then()
-                .body("author",containsStringIgnoringCase("sanat"));
+                .body("author", containsStringIgnoringCase("sanat"));
     }
 
     public static void PerformQueryParameter() {
